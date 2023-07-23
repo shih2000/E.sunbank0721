@@ -15,5 +15,7 @@ namespace E.sunbank0721.Data
         }
 
         public DbSet<E.sunbank0721.Models.Product> Product { get; set; } = default!;
+
+        public DbSet<E.sunbank0721.Models.Order>? Order { get; set; }
     }
 }
