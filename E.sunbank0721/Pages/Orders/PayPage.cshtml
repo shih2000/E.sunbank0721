@@ -15,7 +15,7 @@
                        data-val-length="會員編號為數字."
                        data-val-length-max="5" data-val-required="此欄為必填."
                        id="MemberID" maxlength="5" name="Order.MemberID" value="" />
-                <input type="submit" value="確認付款" />
+                <input type="submit" value="確認付款" onclick=PayStatusFunction() />
                 <input name="__RequestVerificationToken" type="hidden"
                        value="<Antiforgery token here>" />
                 <span asp-validation-for="Order.MemberID" class="text-danger"></span>

@@ -6,24 +6,38 @@
 }
 <div class="text-center">
     <h1 class="display-4">歡迎下訂</h1>
+    <br/>
     <div>
-        <table style="border:2px #cccccc solid;" cellpadding="10" border="1">
+        <table align="center" style="border:2px #cccccc solid;" cellpadding="10" border="1">
+            
             <tr>
                 <td>選擇</td>
                 <td>數量</td>
                 <td>商品名稱</td>
                 <td>價格</td>
             </tr>
-            
+            @foreach (var item in Model.Product) {
             <tr>
                 <td><input type="checkbox" name="checkbox" value="1" /><br /></td>
-                <td><input type="text" name="numberbox" placeholder="請輸入需要的數量" /><br /></td>
-                <td></td>
-                <td></td>
-            </tr>         
+                <td><input type="number" name="numberbox" placeholder="請輸入需要的數量" /><br /></td>
+                <td>@Html.DisplayFor(modelItem => item.Product_Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+            </tr>
+            }
         </table>
+        <br />
+        <input type ="button" value="合計" onclick="total()" />
+        <hr/>
+        <p align="center">合計:<input type="number" name="total" /></p>
+        <br />
         <input type="button" value="前往付款網站" onclick="" />
-        <input type="submit" value="送出" />
     </div>
 
 </div>
+<script>
+    fuction total(){
+        price=price+document.getElementById("numberbox").value*item.Price;
+        return price;
+    }
+</script>
+

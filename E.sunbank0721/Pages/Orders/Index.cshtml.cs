@@ -20,12 +20,16 @@ namespace E.sunbank0721.Pages.Orders
         }
 
         public IList<Order> Order { get;set; } = default!;
-
+        public IList<Product> Product { get; set; } = default!;
         public async Task OnGetAsync()
         {
             if (_context.Order != null)
             {
                 Order = await _context.Order.ToListAsync();
+            }
+            if (_context.Product != null)
+            {
+                Product = await _context.Product.ToListAsync();
             }
         }
     }

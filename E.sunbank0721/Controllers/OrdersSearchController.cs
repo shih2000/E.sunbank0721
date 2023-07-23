@@ -13,15 +13,15 @@ using System.Linq;
 
 namespace E.sunbank0721.Controllers
 {
-    public class OrdersController : Controller
+    public class OrdersSearchController : Controller
     {
         private readonly E.sunbank0721.Data.Esunbank0721Context _context;
 
-        public OrdersController(E.sunbank0721.Data.Esunbank0721Context context)
+        public OrdersSearchController(E.sunbank0721.Data.Esunbank0721Context context)
         {
             _context = context;
         }
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> CheckOrders(string searchString)
         {
 
 
