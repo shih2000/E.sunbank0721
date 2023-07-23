@@ -3,6 +3,7 @@ using E.sunbank0721.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E.sunbank0721.Migrations
 {
     [DbContext(typeof(Esunbank0721Context))]
-    partial class Esunbank0721ContextModelSnapshot : ModelSnapshot
+    [Migration("20230723052211_AddProductReviews")]
+    partial class AddProductReviews
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
